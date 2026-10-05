@@ -36,7 +36,7 @@ jobs:
           - 3.8
     steps:
       # Prepare environment
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v7
       # Set up and run tests
       - name: Install python
         uses: actions/setup-python@v2
@@ -73,7 +73,7 @@ jobs:
       PUSH: ${{ toJSON(github.event_name != 'pull_request') }}
     steps:
       # Set up Docker Environment
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: actions/cache@v4
         with:
           path: |
