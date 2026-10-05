@@ -121,13 +121,13 @@ jobs:
       # Next jobs only happen outside of pull requests and on main branches
       - name: Login to DockerHub
         if: ${{ fromJSON(env.PUSH) }}
-        uses: docker/login-action@v3
+        uses: docker/login-action@v4
         with:
           username: ${{ secrets.DOCKERHUB_LOGIN }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Login to GitHub Container Registry
         if: ${{ fromJSON(env.PUSH) }}
-        uses: docker/login-action@v3
+        uses: docker/login-action@v4
         with:
           registry: ghcr.io
           username: ${{ secrets.BOT_LOGIN }}
