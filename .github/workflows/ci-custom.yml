@@ -5,6 +5,7 @@ name: Build, Test & Deploy
   push:
     branches:
       - master
+      - v0.5.0-next
     tags:
       - "v*"
   schedule:
